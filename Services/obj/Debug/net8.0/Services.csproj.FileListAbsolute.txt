@@ -13,3 +13,4 @@ C:\Assignments\dotnet\Services\obj\Debug\net8.0\Services.dll
 C:\Assignments\dotnet\Services\obj\Debug\net8.0\refint\Services.dll
 C:\Assignments\dotnet\Services\obj\Debug\net8.0\Services.pdb
 C:\Assignments\dotnet\Services\obj\Debug\net8.0\ref\Services.dll
+C:\Assignments\dotnet\Services\obj\Debug\net8.0\Services.sourcelink.json

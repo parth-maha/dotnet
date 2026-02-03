@@ -1,9 +1,17 @@
 using Microsoft.EntityFrameworkCore;
 using Data.Context;
+using Data.Repository;
+using Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddControllersWithViews();
+
+// DI
+builder.Services.AddScoped<IProductRepo, ProductRepository>();
+builder.Services.AddScoped<IProductService, ProductService>();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(connectionString));

@@ -12,3 +12,4 @@ C:\Assignments\dotnet\Data\obj\Debug\net8.0\ref\Data.dll
 C:\Assignments\dotnet\Data\bin\Debug\net8.0\Data.runtimeconfig.json
 C:\Assignments\dotnet\Data\obj\Debug\net8.0\Data.csproj.AssemblyReference.cache
 C:\Assignments\dotnet\Data\obj\Debug\net8.0\Data.genruntimeconfig.cache
+C:\Assignments\dotnet\Data\obj\Debug\net8.0\Data.sourcelink.json
