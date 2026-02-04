@@ -17,7 +17,7 @@ namespace Web.Middlewares
         {
 
             // _logger.LogInformation($" Request: {context.Request.Method} {context.Request.Path}");
-            Console.WriteLine($"Request received: {context.Request.Method} {context.Request.Path}");
+            Console.WriteLine($"Request received: [{context.Request.Method}] {context.Request.Path} - {DateTime.Now:dd-MM-yyyy HH:mm:ss}");
 
             await _next(context);
 

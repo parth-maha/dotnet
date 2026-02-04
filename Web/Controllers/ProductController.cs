@@ -11,13 +11,13 @@ namespace Web.Controllers
 
         public ProductController(IProductService service)
         {
-            _service= service;
+            _service = service;
         }
 
         public async Task<IActionResult> Index()
         {
             var products = await _service.GetAllAsync();
-            ViewBag.TotalProducts = await _service.GetTotalCountAsync();
+            ViewBag.TotalProducts = products.Count;
             return View(products);
         }
 
@@ -29,26 +29,28 @@ namespace Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Product product)
         {
-            if(ModelState.IsValid)
-            {
-                await _service.AddAsync(product);
-                return RedirectToAction(nameof(Index));
-            }
+            // Console.WriteLine(product.Category);
+            // Console.WriteLine(product.Name);
+            // Console.WriteLine(product.Price);
+            // Console.WriteLine(product.Quantity);
+            await _service.AddAsync(product);
+            return RedirectToAction(nameof(Index));
 
-            return View(product);
+            // return View(product);
         }
 
         public async Task<IActionResult> Edit(int id)
         {
             var product = await _service.GetIdAsync(id);
-            if(product ==null) return NotFound();
+            if (product == null) return NotFound();
             return View(product);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(int id,Product product)
+        public async Task<IActionResult> Edit(int id, Product product)
         {
-            if(ModelState.IsValid){
+            if (ModelState.IsValid)
+            {
                 await _service.UpdateAsync(product);
                 return RedirectToAction(nameof(Index));
             }
@@ -58,8 +60,8 @@ namespace Web.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             var product = await _service.GetIdAsync(id);
-            if(product== null) return NotFound();
-            return View(product); 
+            if (product == null) return NotFound();
+            return View(product);
         }
 
         [HttpPost, ActionName("Delete")]

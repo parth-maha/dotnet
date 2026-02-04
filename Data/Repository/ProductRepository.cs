@@ -50,11 +50,7 @@ namespace Data.Repository
 
         public async Task<int> GetTotalCountAsync()
         {
-            // await using var connection = new SqlConnection(_connectionString);
-            // await connection.OpenAsync();
-            // await using var query = new SqlCommand("SELECT COUNT(*) FROM PRODUCTS",connection);
-            // var count = await query.ExecuteScalarAsync();
-            // return Convert.ToInt32(count);
+            var products = await GetAllAsync();
             return 10;
         }
     }
