@@ -8,9 +8,9 @@ C:\Assignments\dotnet\Services\obj\Debug\net8.0\Services.GeneratedMSBuildEditorC
 C:\Assignments\dotnet\Services\obj\Debug\net8.0\Services.AssemblyInfoInputs.cache
 C:\Assignments\dotnet\Services\obj\Debug\net8.0\Services.AssemblyInfo.cs
 C:\Assignments\dotnet\Services\obj\Debug\net8.0\Services.csproj.CoreCompileInputs.cache
+C:\Assignments\dotnet\Services\obj\Debug\net8.0\Services.sourcelink.json
 C:\Assignments\dotnet\Services\obj\Debug\net8.0\Services.csproj.Up2Date
 C:\Assignments\dotnet\Services\obj\Debug\net8.0\Services.dll
 C:\Assignments\dotnet\Services\obj\Debug\net8.0\refint\Services.dll
 C:\Assignments\dotnet\Services\obj\Debug\net8.0\Services.pdb
 C:\Assignments\dotnet\Services\obj\Debug\net8.0\ref\Services.dll
-C:\Assignments\dotnet\Services\obj\Debug\net8.0\Services.sourcelink.json
