@@ -7,7 +7,10 @@ using Microsoft.Extensions.Configuration;
 namespace Data.Repository
 {
     public class ProductRepository : IProductRepo
-    {
+    {   
+        const string connectionString =
+            "Server=localhost\\SQLEXPRESS;Database=ims;Trusted_Connection=True;TrustServerCertificate=True;";
+
         private readonly AppDbContext _context;
         public ProductRepository(AppDbContext context)
         {   
@@ -50,8 +53,11 @@ namespace Data.Repository
 
         public async Task<int> GetTotalCountAsync()
         {
-            var products = await GetAllAsync();
-            return 10;
+            await using var connection = new SqlConnection(connectionString);
+            await connection.OpenAsync();
+            await using var query = new SqlCommand("SELECT COUNT(*) FROM PRODUCTS",connection);
+            var count = await query.ExecuteScalarAsync();
+            return Convert.ToInt32(count);
         }
     }
 }

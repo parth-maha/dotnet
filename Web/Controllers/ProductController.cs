@@ -17,7 +17,7 @@ namespace Web.Controllers
         public async Task<IActionResult> Index()
         {
             var products = await _service.GetAllAsync();
-            ViewBag.TotalProducts = products.Count;
+            ViewBag.TotalProducts = await _service.GetTotalCountAsync();
             return View(products);
         }
 
